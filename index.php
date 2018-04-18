@@ -20,6 +20,8 @@ if (isset($_POST['hex'])) {
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>ZK-Code & WEG 26 Converter</title>
+
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,11 +42,20 @@ if (isset($_POST['hex'])) {
                             <div class="invalid-feedback">
                                 Please enter a valid 10 digit hex code
                             </div>
-                            <small id="hex" class="form-text text-muted">Enter a 10 digit hex code in the field above</small>
+                            <small class="form-text text-muted">Enter a 10 digit hex code in the field above</small>
                         </div>
                         <button type="submit" class="btn btn-primary">Convert</button>
                     </form>
                     <?php if (isset($zk) && isset($weg_26)): ?>
+                        <div class="row justify-content-md-center mt-3">
+                            <div class="col col-2">
+                                <p>Original</p>
+                            </div>
+                            <div class="col col-4">
+                                <p class="mb-0"><?php echo $hex_code; ?></p>
+                                <footer class="blockquote-footer" style="font-size: 60%;">10 digit hex code</footer>
+                            </div>
+                        </div>
                         <div class="row justify-content-md-center mt-3">
                             <div class="col col-2">
                                 <p>ZK-Code</p>
@@ -70,7 +81,8 @@ if (isset($_POST['hex'])) {
         </div>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
 </html>
